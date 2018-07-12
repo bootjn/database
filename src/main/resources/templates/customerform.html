@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<!--<form th:action="@{/process}" method="post" action="#">-->
+    <!--Enter-->
+
+<!--</form>-->
+
+
+<div class="col-md-6 col-md-offset-3">
+    <form th:action="@{/search}" method="post">
+        <div>Enter a complete or partial <span class="text-success">course</span> to search for </div>
+        <label>Course name: </label><input type="text" name="search"/>
+        <input type="submit" text="Submit"/>
+    </form>
+</div>
+
+<table>
+    <tr th:each="list : ${listResult}">
+        <td th:text="${lis.firstname}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
